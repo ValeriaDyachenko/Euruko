@@ -1,0 +1,56 @@
+  .schedule{
+    background-color: $schedule_back;
+    .title{color: $schedule_title}
+    .description{
+      .schedule_table{
+        #schedule{
+          @include outerRow;
+          @include margin-trailer(4);
+          font-family: "Casper",sans-serif;
+          tr{
+            border-bottom: 3px solid $schedule_border;
+            height: 40px;
+          }
+          #time{
+            @include column(2);
+            @include adjust-font-size-to($time-font-size);
+            font-family: 'Raleway', sans-serif;
+          }
+          #day1, #day2{
+            @include column(5);
+            @include adjust-font-size-to($days-font-size);
+          }
+          #header{
+            @include adjust-font-size-to($header-font-size);
+            color: $schedule_day;
+          }
+          .title_speaks{color:$schedule_title_speaks}
+          #rests_time{  
+            td{text-transform: uppercase;}      
+            &:hover {
+              background-color: $schedule_hover;
+            }
+          }
+          #speaks_time{
+            @include outerRow;
+            .about_speaks{display: none;}      
+            &:hover {
+                background-color: $schedule_hover;
+                width: 100%;
+                height: 100px;
+              .about_speaks{
+                @include padding-trailer(2);
+                font-size: 16px;
+                line-height: 1.3em;
+                display: block;    
+                background-color: white;
+                height: 250px;           
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }   
+  }
+    

@@ -1,0 +1,50 @@
+.stay_in_touch{
+  background-color: $stay_in_touch_back;
+  @include padding-trailer(1.5);
+  color:white;
+  a{color: white}
+  .stay_in_touch_table{
+    @include adjust-font-size-to($contact-font-size, 1.2);
+    @include padding-leader;
+    @include margin-trailer(1.5);
+    font-family: "Casper",sans-serif;
+    #footer_table{
+      @include column(12);
+      #header{
+        #left{
+          @include column(5);
+          #contact{color: $contact;}
+          #input_email{
+            @include margin-leader(0.5);
+            @include margin-trailer(0.5);
+            @include border-radius(5px); 
+            border: 2px solid $subscribe;
+            color: $subscribe;
+            padding: 10px;
+           }
+          #btn_subscribe{
+            @include border-radius(3px); 
+            color: white;
+            background-color: $subscribe;
+            border: none;
+            padding: 10px;
+          }
+        } 
+        #right{   
+         .button{
+           @include column(5);
+            float: right;
+            width: 60px;  
+          }
+        }
+      }
+    }  
+  }
+  footer{
+    color: white;
+    @include outerRow;
+    @include adjust-font-size-to($hrehs_contact-font-size);
+    .copy{float: left;}
+    .hrefs {float: right;}
+  }
+}

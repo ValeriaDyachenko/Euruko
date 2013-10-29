@@ -1,0 +1,46 @@
+.euruko_header{
+  background-image: image-url("eu_back.png");
+  @include background-size(100% 100%);
+  &:hover {
+    background-image: image-url("eu_back2.png");
+  }
+  .border_left{
+    @include column(1.2);
+    @include background-size(100% 100%);
+    background-image: image-url("eu_left.png");
+    height: 610px;
+    background-repeat: no-repeat; 
+  }
+  .description{
+    @include outerRow;
+    color: $euruko_content;
+    .when{
+      @include margin-leader;
+      @include adjust-font-size-to($euruko_when-font-size, 2);
+      text-align: right;
+    }
+    .what{
+      background-image: image-url("logo.big.png");
+      height: 220px;
+      background-repeat: no-repeat; 
+      @include background-size(100% 100%);
+      @include column(9,center);
+    }
+    .about_text{
+      @include column(8,center);
+      @include margin-leader;
+      @include margin-trailer;
+      @include adjust-font-size-to($euruko_about-font-size, 1.8);
+      text-align: center;
+    }
+  }
+  .border_right{
+    @include background-size(100% 100%);
+    @include column(1.2);
+    background-image: image-url("eu_right.png");
+    height: 610px;
+    background-repeat: no-repeat; 
+    float: right;
+  }
+}
+

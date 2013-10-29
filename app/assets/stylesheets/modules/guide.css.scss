@@ -1,0 +1,45 @@
+.guide{
+  background-color: $guide_back;
+  @include padding-trailer(1.2);
+  .description{
+    @include adjust-font-size-to($guide_table-font-size);
+    font-family: "Casper",sans-serif;
+    .guide_table{
+      @include column(12);
+      @include margin-leader;
+      color: $table_text;
+      #hotels_table{
+        width: 100%;
+        border: 6px solid $guide_back;
+        td{
+          border-left: 2px solid $header_back;
+          border-right: 2px solid $header_back;
+          text-align: center;
+        }
+        #hotel{ width: 25%;}
+        #phone{ width: 25%;}
+        #price{ width: 20%;}
+        #header{
+          height: 40px;
+          background-color: $header_back;
+          color: $guide_text;
+          #url{
+            width: 30%;
+            text-align: center;
+          }
+        }
+        #content{
+          height: 40px;
+           &:hover {
+           color: $guide_text;
+          }
+          #url{
+            width: 30%;
+            padding-left: 25px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

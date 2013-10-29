@@ -1,0 +1,16 @@
+.live_stream{
+  background-color: $live_stream_back;
+  .description{
+    .video{
+      @include margin-trailer(2);
+      @include column(6.6,center);
+      height: 380px;
+      background-repeat: no-repeat;
+      background-image: image-url("video.jpg");
+    }
+  }
+
+}
+
+
+

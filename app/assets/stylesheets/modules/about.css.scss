@@ -1,0 +1,12 @@
+.about{
+  background-color: $about_back;
+  .about_description{
+    @include padding-leader(2);
+    @include padding-trailer(5);
+    @include column(8);
+    @include adjust-font-size-to($about-font-size, 1.3);
+    font-family: "Casper",sans-serif;
+    color: $about_description;
+  }
+}
+

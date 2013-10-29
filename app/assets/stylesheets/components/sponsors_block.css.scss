@@ -1,0 +1,202 @@
+@mixin block($color,$height) {
+  background-color: $color;
+  height: $height;
+  background-repeat: no-repeat;
+  color: black;
+  display: block;
+}
+
+@mixin before($color,$back_color) {
+  border-top: 30px solid $back_color;
+  border-right: 103px solid $color;
+  border-left: 109px solid $color;
+  position: absolute;
+}
+
+@mixin after($color,$back_color) {
+  border-top: 30px solid $color;
+  border-right: 106px solid $back_color;
+  border-left: 107px solid $back_color;
+  position: absolute;
+}
+@mixin left($color,$back_color) {
+  @include column(0.5);
+  border-left: 35px solid $color;
+  border-top: 110px solid $back_color;
+  border-bottom: 110px solid $back_color;
+}
+
+@mixin right($color,$back_color) {
+  @include column(0.5);
+  border-right: 35px solid $color;
+  border-top: 110px solid $back_color;
+  border-bottom: 110px solid $back_color;
+}
+@mixin img($img,$left,$top) {
+  top: $top;
+  background-image: image-url($img);
+  margin-left: $left;
+  height: 100%;
+  width: 100%;
+}
+
+
+.block1 { 
+  @include block($very-light-azure,220px);
+  width: 460px;
+  .img{
+    @include img("1.png",20px, 40px);
+  }
+}
+.block2{
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 400px;
+  @include block($light-azure,210px);
+}      
+.block3{
+  padding-left: 20px;
+  padding-top: 10px;
+  width: 390px;
+  @include block($light-azure,210px);
+}      
+.block4 { 
+  width: 480px;
+  margin-left: -60px;
+  @include block($very-light-azure,220px);
+ .img{
+    @include img("2.png",20px, 40px);
+  }
+}
+
+.block1_right{
+  @include left($azure,$light-azure);
+}
+.block1_left{
+  @include left($very-light-azure,$azure);
+}
+.block2_right{
+  left: -50px;
+  @include right($very-light-azure,$azure);
+}
+.block2_left{
+  left: -50px;
+  @include right($azure,$light-azure);
+}
+
+
+
+.block_helios_up1{
+  @include block($very-light-azure,160px);
+  .img{
+    @include img("hel1.png",20px, 40px);
+  }
+}
+.block_helios_up2{
+  @include block($very-light-azure,160px);
+  .img{
+    @include img("hel2.png",30px, 40px);
+  }
+}
+.block_helios_down{
+  @include block($light-azure,160px);
+  padding: 40px 15px;
+
+}
+.helios_img_up{
+  @include after($very-light-azure,$azure);
+}
+
+.helios_img_down{
+  @include before($light-azure,$azure);
+}
+
+
+
+.block_selene1{
+  @include block($very-light-azure,160px);
+  .img{
+    @include img("selene.png",20px, 40px);
+  }
+}
+.block_selene2{
+  @include block($very-light-azure,160px);
+  .img{
+  @include img("selene2.png",20px, 40px);
+  }
+}
+.block_selene3{
+  @include block($very-light-azure,160px);
+  .img{
+    @include img("selene3.png",30px, 40px);
+  }
+}
+.block_selene4{
+  @include block($very-light-azure,160px);
+  .img{
+    @include img("selene4.png",20px, 40px);
+  }
+}
+
+
+
+.block_aphrodite1 {
+  @include block($very-light-azure,130px);
+  .img{
+    @include img("aph1.png",5px, 40px);
+  }
+}
+.block_aphrodite2 {
+  @include block($very-light-azure,130px);
+  .img{
+    @include img("aph2.png",40px,0px);
+  }
+}
+.block_aphrodite3 {
+  @include block($very-light-azure,130px);
+  .img{
+    @include img("aph3.png",5px,20px);
+  }
+}
+.block_aphrodite4 {
+  @include block($very-light-azure,130px);
+  .img{
+    @include img("aph4.png",5px,40px);
+  }
+}
+.block_aphrodite5 {
+  @include block($very-light-azure,130px);
+  .img{
+    @include img("aph5.png",5px,40px);
+  }
+}
+.block_aphrodite6 {
+  @include block($very-light-azure,130px);
+  .img{
+    @include img("aph5.png",5px,40px);
+  }
+}
+
+
+
+.block_additional_up{
+  @include block($light-azure,40px);
+  text-align: center;
+  @include adjust-font-size-to($btn_buy-font-size,1);     
+  @include padding-leader;
+}
+.block_additional_down{
+  @include block($very-light-azure,160px);
+  .img{
+    @include img("add.png",20px,40px);
+  }
+}
+.add_img_up{
+  @include after($light-azure,$azure);
+}
+.add_img_down{
+  @include before($very-light-azure,$azure);
+  top:0px;
+}
+
+

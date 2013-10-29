@@ -1,0 +1,24 @@
+.speakers{
+  background-color: $speakers_back;
+  .description{
+    @include adjust-font-size-to($speakers-font-size, 1.3);
+    @include padding-trailer(4);
+    font-family: "Casper",sans-serif;
+    #about_speaker{ 
+      @include column(9);
+      .name{
+        @include padding-trailer(0.5);
+        @include adjust-font-size-to($speakers_name-font-size, 1.3);
+        color: $speakers_name;}
+      .who_is {
+        @include padding-trailer(0.5);
+        color: $speakers_who_is;
+      }
+      .speakers_history { color: $speakers_history; }     
+      .contact_block{
+        @include column(4);
+        color: $speakers_contact_block;
+      }    
+    }      
+  }        
+}

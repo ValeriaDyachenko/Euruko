@@ -1,0 +1,19 @@
+@mixin sblock($img){
+  border: none;
+  background: none;
+  height: 60px;   
+  width: 60px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  background-image: image-url($img);
+}
+
+#wifi{
+  @include sblock("wi.png");
+}
+#face{
+  @include sblock("face.png");
+}
+#twit{
+  @include sblock("twit.png");
+}

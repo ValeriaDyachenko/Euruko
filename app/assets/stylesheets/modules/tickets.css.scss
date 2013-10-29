@@ -1,0 +1,94 @@
+.tickets{
+  background-color: $tickets_back;
+  .description{
+    .tickets_description{
+      @include column(10);
+      @include padding-trailer(1.4);
+      @include adjust-font-size-to($tickets_description-font-size, 1.2);
+      text-align: center;
+      text-indent: 20px;
+      margin-left: 12px;
+      color: $tickets_description;
+     }
+    .tickets_form {    
+      @include margin-trailer(2.1);
+      @include padding-leader(0.6);
+      @include column(10);
+      margin-left: 12px;
+      background-color: $tickets_form;
+      padding-right: 4px;
+      color: black;
+      #tikets_table{
+        width: 100%;
+        tr{
+          border-top: 1px solid $tickets_border;
+          border-bottom: 1px solid $tickets_border;
+          height: 40px;
+        }
+        #count{
+          @include block-grid(2);
+          #inp{
+            @include column(1.5);   
+            input{       
+              @include border-radius(5px);
+              width: 50px;  
+              height: 25px;
+            }   
+          }
+          #btns{
+            @include column(3);   
+            .up, .down{ 
+              display: block;
+              background: none;
+              background-repeat: no-repeat; 
+              height: 5px;
+              width: 20px; 
+              padding-top: 7px;
+            }
+            .up{
+              margin-top: 3px;
+              background-image: image-url("up.jpg");
+              }
+            .down{
+              margin-top: -18px;
+              background-image: image-url("down.jpg");
+            }
+          }       
+       }       
+        #one{ width: 30%;}
+        #two{ width: 30%;}
+        #three{ width: 20%;}
+        #four{ float: right;}
+        #header, #footer{
+          td{font-weight: bold;}
+        }
+      }
+      a{text-decoration: none;}
+      #promotion_code{
+        @include margin-leader(0.6);
+        color: $href_green;
+        float: right;
+      }
+      .cards{
+        @include margin-trailer(1.5);
+      }
+      #btn_buy{
+        @include border-radius(5px); 
+        @include adjust-font-size-to($btn_buy-font-size);
+        background-color: $btn_buy;
+        color: white;
+        float: right;
+        border-top: none;
+        border-left: none;
+        padding: 0px 10px;
+      }  
+      #key{
+        @include column(0.6);   
+        height: 40px;
+        background-repeat: no-repeat;
+        background-image: image-url("key.jpg");}
+      #eneryption{color: $href_orange;}
+      #certificate{color: $href_green;}
+    }
+  }
+}

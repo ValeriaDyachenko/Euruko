@@ -1,0 +1,13 @@
+@mixin speakers_contact($img) {
+  @include column(2);
+  background-repeat: no-repeat;
+  height: 30px;
+  background-image: image-url($img);
+}
+
+.img{
+   @include speakers_contact("twiti.png");
+}
+.img2{
+   @include speakers_contact("git.png");
+}

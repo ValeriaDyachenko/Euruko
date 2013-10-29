@@ -1,0 +1,116 @@
+@import "compass";
+@import "foundation-grid";
+
+$base-font-size: 14px;
+$base-line-height: 20px;
+
+//title 
+$title-font-size: 25px;
+$title: white;
+
+// euruko_header
+$euruko_when-font-size: 40px;
+$euruko_about-font-size: 30px;
+$euruko_content: white;
+
+
+// euruko_menu
+$hrehs_menu-font-size: 12px;
+$euruko_hrefs: black;
+$euruko_hrefs_border: #E8724E;
+
+
+// live stream
+$live_stream_back:#FCA465;
+
+
+// about
+$about-font-size: 19px;
+$about_back: #80BDDA;
+$about_description: #474946;
+
+
+// speakers
+$speakers-font-size: 16px;
+$speakers_name-font-size: 18px;
+$speakers_back: #F17C72;
+$speakers_name: #4A4647;
+$speakers_history: #636162;
+$speakers_who_is: white;
+$speakers_contact_block: white;
+
+
+// tickets
+$tickets_description-font-size: 19px;
+$btn_buy-font-size: 20px;
+$tickets_back: #32ac97;
+$tickets_form: white;
+$tickets_description: white;
+$tickets_border: #D9D9D9;
+$btn_buy: #A3D49D;
+$href_green: #A3D49D;
+$href_orange: #E8724E;
+
+
+// schedule
+$header-font-size: 25px;
+$days-font-size: 19px;
+$time-font-size: 20px;
+$schedule_back: #EBEBEB;
+$schedule_title: black;
+$schedule_border: #9CE9D5;
+$schedule_day: #E9734F;
+$schedule_title_speaks: #E9734F;
+$schedule_hover: #bbeade;
+
+
+// party
+$party_large-font-size: 57.41px;
+$party-font-size: 30px;
+$party_content: white;
+
+
+// guide
+$guide_table-font-size: 18px;
+$guide_back: #AF6479;
+$guide_text: white;
+$table_text: #C997A3;
+$header_back:  #fba466;
+
+
+// venue
+$venue-font-size: 18px;
+$venue_back: #36394A;
+$venue_description: #846457;
+$venue_description_back: #FCA465;
+
+
+// sponsors
+$sponsors_description-font-size: 20px;
+$sponsors_title-font-size: 40px;
+$sponsors-font-size: 16px;
+$sponsors_back: #58BEB1;
+$sponsors_description: white;
+// sponsors blocks
+$azure: #58BEB1;
+$light-azure:#87CEC6;
+$very-light-azure:#77C9BD;
+
+
+// stay in touch
+$contact-font-size: 20px;
+$hrehs_contact-font-size: 12px;
+$stay_in_touch_back: #FF9599;
+$contact: #FFE3A2;
+$subscribe:#58BEB1;
+
+
+
+@include global-reset;
+@include establish-baseline;
+
+@import "layout";
+@import "modules/*";
+@import "components/*";
+
+

@@ -1,0 +1,55 @@
+.tickets#4
+  .title
+    TICKETS
+  .description
+    .tickets_description
+      The ticket's price is 60 . Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magtna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo constequal.
+    .tickets_form        
+      %table#tikets_table
+        %tr#header
+          %td#one
+            Category
+          %td#two
+            Number
+          %td#three
+            Price
+          %td#four
+            Amount  
+        %tr#content
+          %td#one
+            Individual
+          %td#two
+            %ul#count
+              %li#inp
+                %input{size: "5", type: "text", value: "0"}
+              %li#btns
+                %button.up
+                %br
+                %button.down
+          %td#three
+            60 € 
+          %td#four
+            $0.00
+        %tr#footer
+          %td#one
+          %td#two
+          %td#three
+          %td#four
+            Ticket price $0.00
+      %a#promotion_code{href: "#"}=" Click here to enter a promotion code" 
+      %br   
+      %br   
+      %button#btn_buy
+        Next step >>
+      .cards    
+        %button.mc
+        %button.visa
+        %button.as
+        %button.pp
+      %br
+        #key
+        Your data is being transmitted via
+        %a#eneryption{href: "#"}=" SSL eneryption" 
+        , stored securely on our systems and handled confidentially.
+        %a#certificate{href: "#"}=" View SSL certificate" 
+        %br

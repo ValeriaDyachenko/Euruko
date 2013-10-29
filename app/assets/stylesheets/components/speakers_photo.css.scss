@@ -1,0 +1,10 @@
+@mixin speakers_photo($img) {
+  @include column(3);
+  background-repeat: no-repeat;
+  height: 200px;
+  background-image: image-url($img);
+}
+
+#photo{
+   @include speakers_photo("spek.png");
+}

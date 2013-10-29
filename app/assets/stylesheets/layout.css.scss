@@ -1,0 +1,15 @@
+.title{
+  @include outerRow;
+  @include padding-leader(2);
+  color: $title;
+  text-align: center;
+  font-weight: bold;
+  @include adjust-font-size-to($title-font-size);
+  }
+.description{
+  @include outerRow;
+  @include padding-leader(2);
+}
+p{
+  @include padding-trailer;
+}

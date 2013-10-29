@@ -1,0 +1,26 @@
+.euruko_menu {
+  @include padding-trailer;
+  @include padding-leader;
+  @include outerRow;
+  .logo{
+    @include column(2.5);
+    background-image: image-url("euruko_logo_small.png");
+    background-repeat: no-repeat; 
+    height: 50px;
+  }
+  .menu{
+    @include column(9);
+    a {
+      @include inline-block;
+      @include margin-leader(0.7);
+      @include adjust-font-size-to($hrehs_menu-font-size);
+      padding: 0px 10px ;
+      color: $euruko_hrefs;
+      text-decoration: none;
+      &:hover{
+        margin-bottom: -3px;
+        border-bottom: 3px $euruko_hrefs_border solid;
+      }
+    }
+  }    
+}

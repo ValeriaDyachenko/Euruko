@@ -1,0 +1,23 @@
+@mixin card($column) {
+  @include column($column);  
+  border: none;
+  background: none;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+.mc{
+  @include card(0.6);
+  background-image: image-url("mc.jpg");
+}
+.visa{    
+  @include card(0.7);
+  background-image: image-url("visa.jpg");
+}
+.pp{    
+  @include card(0.6); 
+  background-image: image-url("pp.jpg");
+}
+.as{    
+  @include card(0.7);
+  background-image: image-url("as.jpg");
+}
